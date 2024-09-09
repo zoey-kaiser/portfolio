@@ -12,17 +12,17 @@ const skills: SkillItem[] = [
   },
   {
     title: 'Development',
-    description: `Need an amazing design that fits your brand and looks good? Let's talk about your vision!`,
+    description: `ERP, home page or web-app. I have done it all before! No project is too big or small.`,
     icon: 'mingcute:code-line'
   },
   {
     title: 'Open Source',
-    description: `Need an amazing design that fits your brand and looks good? Let's talk about your vision!`,
+    description: `Open source is vital to a developer's life! I maintain and contribute to serveral projects.`,
     icon: 'mingcute:github-line'
   },
   {
     title: 'Speaking',
-    description: `Need an amazing design that fits your brand and looks good? Let's talk about your vision!`,
+    description: `I enjoy sharing about my daily experiences! I speak on podcasts, at meetings or conferences.`,
     icon: 'mingcute:microphone-line'
   }
 ]
