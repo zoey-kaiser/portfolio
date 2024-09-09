@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "type": "module",
+  "engines": {
+    "pnpm": ">=9.4.0",
+    "node": ">=22.3.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node .output/server/index.mjs",
+    "typecheck": "nuxt typecheck",
+    "lint:fix": "eslint . --fix",
+    "lint": "oxlint --deny-warnings -D correctness -D suspicious -D perf && eslint --max-warnings 0 .",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.13.2",
+    "nuxt": "^3.12.4",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.26.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/node": "^20.11.30",
+    "eslint": "^8.57.0",
+    "oxlint": "^0.7.2",
+    "typescript": "^5.4.3",
+    "vue-tsc": "^2.0.7"
+  },
+  "packageManager": "pnpm@8.15.5+sha256.4b4efa12490e5055d59b9b9fc9438b7d581a6b7af3b5675eb5c5f447cee1a589"
+}
