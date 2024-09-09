@@ -1,10 +1,10 @@
 <template>
-  <div class="py-14">
-    <LandingHero class="pb-32" />
+  <div class="w-full h-full">
+    <LandingHero class="pb-28" />
     <LandingSkills />
-    <AppDivider class="my-28" />
+    <AppDivider class="my-20" />
     <LandingProjects />
-    <AppDivider class="my-28" />
-    <LandingTalks />
+    <AppDivider class="my-20" />
+    <LandingTalks class="pb-20" />
   </div>
 </template>

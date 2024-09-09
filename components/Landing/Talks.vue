@@ -26,7 +26,7 @@ const talks: Talk[] = [
 </script>
 
 <template>
-  <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+  <div class="Page relative">
     <div class="relative">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         My Talks
@@ -37,7 +37,7 @@ const talks: Talk[] = [
 
       <div class="space-y-4 mt-8">
         <AppCard v-for="(talk, index) in talks" :key="index">
-          <div class="flex items-start justify-between">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div class="space-y-2">
               <h1 class="text-lg font-medium">
                 {{ talk.title }} @ {{ talk.location }}
@@ -47,16 +47,16 @@ const talks: Talk[] = [
               </p>
             </div>
 
-            <div class="flex flex-col items-end gap-4">
+            <div class="flex flex-col lg:items-end gap-4">
               <p class="text-lg font-medium grow">
                 {{ formatDate(talk.date) }}
               </p>
 
               <NuxtLink v-if="talk.link" :to="talk.link" :external="true" target="_blank">
-                <AppButton type="success">
+                <AppButton type="primary">
                   <div class="flex items-center gap-1">
                     View
-                    <Icon name="mingcute:external-link-line mb-0.5" />
+                    <Icon name="mingcute:external-link-line" size="18" class="mb-[3px]" />
                   </div>
                 </AppButton>
               </NuxtLink>
