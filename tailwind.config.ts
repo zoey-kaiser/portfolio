@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss'
 
+import typography from '@tailwindcss/typography'
+
 export default {
   darkMode: 'class',
   content: [],
@@ -12,7 +14,12 @@ export default {
           lilac: '#E8C5E5',
           pink: '#F19ED2',
         }
+      },
+      fontFamily: {
+        playwrite: ['Playwrite CL'],
+        varela: ['Varela Round']
       }
     }
-  }
+  },
+  plugins: [typography]
 } satisfies Config
