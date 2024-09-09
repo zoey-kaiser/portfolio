@@ -1,7 +1,7 @@
 <template>
-  <div class="space-y-32 my-14">
-    <LandingHero />
+  <div class="my-14">
+    <LandingHero class="pb-32" />
     <LandingSkills />
-    <AppDivider />
+    <AppDivider class="my-20" />
   </div>
 </template>
