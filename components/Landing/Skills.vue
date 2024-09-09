@@ -29,7 +29,7 @@ const skills: SkillItem[] = [
 </script>
 
 <template>
-  <div class="Page grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+  <div class="Page grid sm:grid-cols-2 xl:grid-cols-4 items-start gap-4">
     <AppCard v-for="skill in skills" :key="skill.title">
       <h1 class="flex items-center gap-2 text-2xl">
         <Icon :name="skill.icon" />
