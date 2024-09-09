@@ -9,8 +9,8 @@
     "dev": "nuxt dev",
     "build": "nuxt build --preset github_pages",
     "typecheck": "nuxt typecheck",
-    "lint:fix": "eslint . --fix",
     "lint": "oxlint --deny-warnings -D correctness -D suspicious -D perf && eslint --max-warnings 0 .",
+    "lint:fix": "eslint . --fix",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
