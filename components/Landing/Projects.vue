@@ -5,7 +5,7 @@ const posts = [
     title: 'Sidestream Labs',
     description: 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo.',
     imageUrl: '/projects/labs.png',
-    class: 'bg-red-200/25 border-red-200'
+    class: 'bg-green-200/25 border-green-200'
   },
   {
     id: 1,
@@ -26,15 +26,15 @@ const posts = [
     title: 'sidebase.io',
     description: 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo.',
     imageUrl: '/projects/sidebase.png',
-    class: 'bg-green-200/25 border-green-200'
+    class: 'bg-pink-200/25 border-pink-200'
   },
 ]
 </script>
 
 <template>
   <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-    <BackgroundBlobLilac class="absolute top-2 left-96 h-96 w-96" />
-    <BackgroundBlobGreen class="absolute bottom-48 -right-10 h-96 w-96" />
+    <BackgroundBlobLilac class="absolute bottom-48 -right-10 h-96 w-96" />
+    <BackgroundBlobGreen class="absolute top-2 left-96 h-96 w-96" />
     <BackgroundBlobPink class="absolute bottom-0 -left-14 h-96 w-96" />
 
     <div class="relative">
