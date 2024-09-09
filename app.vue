@@ -4,5 +4,6 @@
     <div class="max-w-7xl mx-auto px-6 pt-28">
       <NuxtPage />
     </div>
+    <AppFooter />
   </div>
 </template>
