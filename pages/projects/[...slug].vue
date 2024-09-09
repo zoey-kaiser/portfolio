@@ -43,8 +43,8 @@ const isPreviewOpen = ref(false)
         </div>
       </div>
 
-      <div class="bg-white p-6 rounded-lg border mt-6">
-        <article class="prose">
+      <div class="bg-white p-9 pb-6 rounded-lg border mt-6">
+        <article class="prose prose-sm">
           <ContentDoc />
         </article>
       </div>
