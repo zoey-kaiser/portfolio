@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 // Cal.com
 useHead({
+  title: 'Zoey Kaiser',
   script: [
     {
       key: 'cal',
