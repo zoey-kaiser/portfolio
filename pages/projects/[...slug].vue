@@ -7,12 +7,16 @@ const isPreviewOpen = ref(false)
 
 <template>
   <div class="relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-[35vh] bg-pastel-lilac-100 overflow-hidden">
+    <div
+      class="absolute top-0 left-0 w-full h-[35vh] bg-pastel-lilac-100 overflow-hidden"
+      :class="{ 'h-[35vh]': project, 'h-full': !project }"
+    >
       <BackgroundBlobLilac class="hidden lg:block absolute top-20 -right-48 h-96 w-96" />
       <BackgroundBlobPink class="hidden lg:block absolute rotate-90 -top-32 -left-20 h-96 w-96" />
     </div>
 
-    <main class="Page relative pt-32 min-h-[93vh]">
+    <NotFound v-if="!project" class="relative min-h-[93vh] pt-32" />
+    <main v-else class="Page relative pt-32 min-h-[93vh]">
       <div class="flex flex-col md:flex-row md:items-center gap-4 justify-between">
         <div class="space-y-2">
           <h1 class="text-4xl font-bold">
@@ -54,7 +58,7 @@ const isPreviewOpen = ref(false)
     </main>
   </div>
 
-  <AppModal v-if="project.fullPreview" v-model="isPreviewOpen">
+  <AppModal v-if="project && project.fullPreview" v-model="isPreviewOpen">
     <DialogPanel class="w-full max-w-7xl overflow-hidden rounded-2xl bg-white align-middle shadow-xl transition-all">
       <div class="w-full h-11 rounded-t-lg bg-gray-200 flex justify-start items-center space-x-1.5 px-3">
         <span class="group w-4 h-4 grid place-content-center rounded-full bg-red-400" @click="isPreviewOpen = false">
