@@ -44,7 +44,7 @@ jobs:
         run: pnpm i
 
       - name: Build
-        run: pnpm build
+        run: npx nuxt build --preset github_pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
