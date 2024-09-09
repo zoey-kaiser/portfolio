@@ -2,6 +2,7 @@
 // Cal.com
 useHead({
   title: 'Zoey Kaiser',
+  titleTemplate: title => `${title} - Zoey Kaiser`,
   script: [
     {
       key: 'cal',

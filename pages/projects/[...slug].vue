@@ -13,6 +13,10 @@ const isPreviewOpen = ref(false)
       <div class="flex flex-col md:flex-row md:items-center gap-4 justify-between">
         <div class="space-y-2">
           <h1 class="text-4xl font-bold">
+            <NuxtLink to="/projects" class="text-pastel-lilac-800 hover:underline">
+              Projects
+            </NuxtLink>
+            /
             {{ project.name }}
           </h1>
 
