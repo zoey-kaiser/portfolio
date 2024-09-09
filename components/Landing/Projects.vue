@@ -9,7 +9,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Sidestream Labs',
-    imageUrl: '/projects/labs.png',
+    imageUrl: '/projects/labs/preview.png',
     class: 'bg-green-200/25 border-green-200'
   },
   {
@@ -19,12 +19,12 @@ const projects: Project[] = [
   },
   {
     title: 'Rechnungsradar',
-    imageUrl: '/projects/rechnungsradar.png',
+    imageUrl: '/projects/rechnungsradar/preview.png',
     class: 'bg-blue-200/25 border-blue-200'
   },
   {
     title: 'sidebase.io',
-    imageUrl: '/projects/sidebase.png',
+    imageUrl: '/projects/sidebase/preview.png',
     class: 'bg-pink-200/25 border-pink-200'
   },
 ]
