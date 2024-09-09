@@ -21,7 +21,7 @@ const buttonClass = computed(() => {
     classesToApply.push(buttonTypesSolid[props.type])
   }
   else {
-    classesToApply.push(...['border', buttonTypesOutline[props.type]])
+    classesToApply.push('border', buttonTypesOutline[props.type])
   }
 
   return classesToApply
