@@ -7,6 +7,7 @@ tags:
   - Starter
   - Documentation
 fullPreview: /projects/sidebase/full.png
+github: https://github.com/sidebase
 ---
 
 sidebase
