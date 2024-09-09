@@ -1,28 +1,31 @@
-<script setup>
-const posts = [
+<script setup lang="ts">
+interface Project {
+  title: string
+  description: string
+  imageUrl: string
+  class: string
+}
+
+const projects: Project[] = [
   {
-    id: 1,
     title: 'Sidestream Labs',
     description: 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo.',
     imageUrl: '/projects/labs.png',
     class: 'bg-green-200/25 border-green-200'
   },
   {
-    id: 1,
     title: 'PixelTranslate',
     description: 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo.',
     imageUrl: '/projects/pixeltranslate.png',
     class: 'bg-orange-200/25 border-orange-200'
   },
   {
-    id: 1,
     title: 'Rechnungsradar',
     description: 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo.',
     imageUrl: '/projects/rechnungsradar.png',
     class: 'bg-blue-200/25 border-blue-200'
   },
   {
-    id: 1,
     title: 'sidebase.io',
     description: 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo.',
     imageUrl: '/projects/sidebase.png',
@@ -48,13 +51,13 @@ const posts = [
 
     <div class="relative mt-8 grid grid-cols-1 gap-10 items-start lg:grid-cols-2">
       <div
-        v-for="post in posts"
-        :key="post.id"
+        v-for="(project, index) in projects"
+        :key="index"
         class="group relative min-h-[450px] p-4 rounded-lg overflow-hidden border-2 backdrop-blur-md"
-        :class="post.class"
+        :class="project.class"
       >
         <img
-          :src="post.imageUrl"
+          :src="project.imageUrl"
           alt=""
           class="absolute h-[350px] w-full top-44 left-10 group-hover:scale-105 transition-all duration-500 z-10"
         >
@@ -62,10 +65,10 @@ const posts = [
         <div class="relative flex flex-col items-start justify-between z-10">
           <div class="px-4 pb-4 mt-4 space-y-3">
             <h3 class="text-2xl font-semibold">
-              {{ post.title }}
+              {{ project.title }}
             </h3>
             <p class="line-clamp-3 text-sm leading-6 text-gray-600">
-              {{ post.description }}
+              {{ project.description }}
             </p>
           </div>
         </div>
