@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-09-09',
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/fonts', '@nuxt/icon'],
+  content: {
+    documentDriven: true
+  },
   typescript: {
     shim: false
   },
