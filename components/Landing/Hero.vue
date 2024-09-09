@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+const { social } = useAppConfig()
+</script>
+
 <template>
   <div class="relative flex items-center justify-between">
     <BackgroundBlobLilac class="absolute -top-48 -left-52 h-96 w-96" />
@@ -13,6 +17,21 @@
         ensuring my code reaches the highest standards while adeptly building and maintaining full-
         stack applications.
       </p>
+
+      <div class="flex items-center gap-2">
+        <AppButton
+          data-cal-link="zoeykaiser/sidebase"
+          data-cal-namespace="sidebase"
+          :data-cal-config="{ layout: 'month_view' }"
+        >
+          Schedule a meeting
+        </AppButton>
+        <NuxtLink :to="`mailto:${social.email}`">
+          <AppButton :solid="false">
+            Send me a mail
+          </AppButton>
+        </NuxtLink>
+      </div>
     </div>
 
     <div class="hidden lg:mt-0 lg:col-span-4 lg:flex">

@@ -53,10 +53,10 @@ const talks: Talk[] = [
               </p>
 
               <NuxtLink v-if="talk.link" :to="talk.link" :external="true" target="_blank">
-                <AppButton type="success">
+                <AppButton type="primary">
                   <div class="flex items-center gap-1">
                     View
-                    <Icon name="mingcute:external-link-line mb-0.5" />
+                    <Icon name="mingcute:external-link-line" size="18" class="mb-[3px]" />
                   </div>
                 </AppButton>
               </NuxtLink>
