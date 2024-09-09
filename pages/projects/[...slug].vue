@@ -6,10 +6,13 @@ const isPreviewOpen = ref(false)
 </script>
 
 <template>
-  <div class="relative pt-32 min-h-[93vh]">
-    <div class="absolute top-0 left-0 w-full h-[40vh] bg-pastel-lilac-100" />
+  <div class="relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-[35vh] bg-pastel-lilac-100 overflow-hidden">
+      <BackgroundBlobLilac class="hidden lg:block absolute top-20 -right-48 h-96 w-96" />
+      <BackgroundBlobPink class="hidden lg:block absolute rotate-90 -top-32 -left-20 h-96 w-96" />
+    </div>
 
-    <main class="Page relative">
+    <main class="Page relative pt-32 min-h-[93vh]">
       <div class="flex flex-col md:flex-row md:items-center gap-4 justify-between">
         <div class="space-y-2">
           <h1 class="text-4xl font-bold">

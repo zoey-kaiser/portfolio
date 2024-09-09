@@ -6,9 +6,10 @@ useHead({
 
 <template>
   <div class="relative overflow-hidden">
-    <BackgroundBlobLilac class="absolute top-24 lg:-left-48 w-32 h-32 lg:h-96 lg:w-96" />
-    <BackgroundBlobGreen class="absolute top-60 right-0 md:right-10 lg:right-96 w-32 h-32 lg:h-96 lg:w-96" />
-    <BackgroundBlobPink class="absolute rotate-90 top-10 lg:-top-32 right-0 lg:-right-20 w-32 h-32 lg:h-96 lg:w-96" />
+    <div class="absolute top-0 left-0 w-full h-[35vh] bg-pastel-lilac-100 overflow-hidden">
+      <BackgroundBlobLilac class="hidden lg:block absolute top-20 -right-48 h-96 w-96" />
+      <BackgroundBlobPink class="hidden lg:block absolute rotate-90 -top-32 -left-20 h-96 w-96" />
+    </div>
 
     <div class="Page space-y-4 pt-32 min-h-[93vh]">
       <div class="relative">
@@ -22,10 +23,10 @@ useHead({
 
       <ContentList v-slot="{ list }" path="/projects">
         <div class="grid lg:grid-cols-3 gap-4 items-start">
-          <NuxtLink v-for="project in list" :key="project._path" :to="project._path" class="relative">
+          <NuxtLink v-for="project in list" :key="project._path" :to="project._path" class="group relative">
             <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-pastel-green via-pastel-lilac-800 to-pastel-pink" />
-            <div class="relative bg-white p-5 rounded-lg m-1 shadow">
-              <h1 class="text-2xl font-medium">
+            <div class="relative bg-white p-5 rounded-lg m-1 shadow group-hover:shadow-lg transition-all">
+              <h1 class="text-2xl font-medium group-hover:underline">
                 {{ project.name }}
               </h1>
 
