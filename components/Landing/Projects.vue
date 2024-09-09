@@ -1,31 +1,35 @@
 <script setup lang="ts">
 interface Project {
   title: string
-  description?: string
   imageUrl: string
   class: string
+  link: string
 }
 
 const projects: Project[] = [
   {
     title: 'Sidestream Labs',
-    imageUrl: '/projects/labs.png',
-    class: 'bg-green-200/25 border-green-200'
+    imageUrl: '/projects/labs/preview.png',
+    class: 'bg-green-200/25 border-green-200',
+    link: '/projects/labs',
   },
   {
     title: 'PixelTranslate',
     imageUrl: '/projects/pixeltranslate.png',
-    class: 'bg-orange-200/25 border-orange-200'
+    class: 'bg-orange-200/25 border-orange-200',
+    link: '/projects/pixeltranslate',
   },
   {
     title: 'Rechnungsradar',
-    imageUrl: '/projects/rechnungsradar.png',
-    class: 'bg-blue-200/25 border-blue-200'
+    imageUrl: '/projects/rechnungsradar/preview.png',
+    class: 'bg-blue-200/25 border-blue-200',
+    link: '/projects/rechnungsradar',
   },
   {
     title: 'sidebase.io',
-    imageUrl: '/projects/sidebase.png',
-    class: 'bg-pink-200/25 border-pink-200'
+    imageUrl: '/projects/sidebase/preview.png',
+    class: 'bg-pink-200/25 border-pink-200',
+    link: '/projects/sidebase',
   },
 ]
 </script>
@@ -46,29 +50,35 @@ const projects: Project[] = [
     </div>
 
     <div class="relative mt-8 grid grid-cols-1 gap-10 items-start lg:grid-cols-2">
-      <div
+      <NuxtLink
         v-for="(project, index) in projects"
         :key="index"
-        class="group relative min-h-[300px] sm:min-h-[350px] p-4 rounded-lg overflow-hidden border-2 backdrop-blur-md"
-        :class="project.class"
+        :to="project.link"
       >
-        <img
-          :src="project.imageUrl"
-          alt=""
-          class="absolute sm:max-h-[250px] lg:max-h-[325px] w-auto -bottom-12 -right-10 group-hover:scale-105 transition-all duration-500 z-10"
+        <div
+          class="group p-4 rounded-lg overflow-hidden border-2 backdrop-blur-md hover:shadow-xl transition-all duration-500"
+          :class="project.class"
         >
+          <div class="relative flex items-center justify-between z-10">
+            <div class="px-4 mt-4 space-y-3">
+              <h3 class="text-2xl font-semibold">
+                {{ project.title }}
+              </h3>
+            </div>
+            <AppButton type="inverse" :solid="false" class="hidden sm:block">
+              Read more
+            </AppButton>
+          </div>
 
-        <div class="relative flex flex-col items-start justify-between z-10">
-          <div class="px-4 pb-4 mt-4 space-y-3">
-            <h3 class="text-2xl font-semibold">
-              {{ project.title }}
-            </h3>
-            <p v-if="project.description" class="line-clamp-3 text-sm leading-6 text-gray-600">
-              {{ project.description }}
-            </p>
+          <div class="relative min-h-[150px] sm:min-h-[250px]">
+            <img
+              :src="project.imageUrl"
+              alt=""
+              class="absolute h-full w-auto left-1/2 -translate-x-1/2 -bottom-16 group-hover:-bottom-10 scale-110 group-hover:scale-125 transition-all duration-500 z-10"
+            >
           </div>
         </div>
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>

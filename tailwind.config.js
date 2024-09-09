@@ -27,7 +27,7 @@ export default {
         }
       },
       fontFamily: {
-        playwrite: ['Playwrite CL'],
+        playpen: ['Playpen Sans'],
         varela: ['Varela Round']
       }
     }
