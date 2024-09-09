@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+useHead({
+  title: 'Projects'
+})
+</script>
+
 <template>
   <div class="relative overflow-hidden">
     <BackgroundBlobLilac class="absolute top-24 lg:-left-48 w-32 h-32 lg:h-96 lg:w-96" />
