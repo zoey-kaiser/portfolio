@@ -23,7 +23,7 @@ const { social } = useAppConfig()
               Projects
             </NuxtLink>
             <NuxtLink to="/resume.pdf" target="_blank" class="text-lg hover:text-pastel-lilac-800">
-              Resume
+              CV
             </NuxtLink>
           </div>
         </div>
