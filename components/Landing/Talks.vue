@@ -1,15 +1,20 @@
 <script setup lang="ts">
 import { diffDays, isAfter } from '@formkit/tempo'
 
+interface Link {
+  label: string
+  href: string
+  iconName?: string
+  solid?: boolean
+}
+
 interface Talk {
   title: string
   location: string
   description: string
   date: Date
-  link?: string
-  ticketLink?: string
   type?: 'podcast' | 'conference' | 'meeting'
-  linkLabel?: 'watch' | 'listen' | 'details'
+  links?: Link[]
 }
 
 const talks: Talk[] = [
@@ -18,19 +23,35 @@ const talks: Talk[] = [
     location: 'vuejs.de Conf',
     type: 'conference',
     date: new Date('2024-10-08'),
-    link: 'https://conf.vuejs.de/talks/code-with-conscience/',
-    linkLabel: 'details',
-    ticketLink: 'https://conf.vuejs.de/tickets/',
     description: 'Join us for an exploration of ethical technology assessments, where we combine ethical theories and modern development. This talk provides practical insights, real-world examples, and a roadmap for developers to champion responsible innovation. Gain the tools and perspectives needed to navigate ethical challenges while contributing to a tech landscape grounded in integrity.',
+    links: [
+      {
+        label: 'Slides',
+        href: '/talks/VueJSDE - Code with Conscience.pdf',
+        iconName: 'mingcute:presentation-1-line'
+      },
+      {
+        label: 'Watch',
+        href: 'https://www.youtube.com/watch?v=vu83i5XW5do&t=18180s',
+        iconName: 'mingcute:tv-2-line',
+        solid: true
+      }
+    ]
   },
   {
     title: 'Between Agency Work and Open Source',
     location: 'DejaVue',
     type: 'podcast',
     date: new Date('2024-09-05'),
-    link: 'https://share.transistor.fm/s/e0cd5429',
-    linkLabel: 'listen',
     description: 'Michael and Alex are joined by Dan and Zoey, both working at SIDESTREAM, an agency using Vue and Nuxt to realize projects. But besides the project business, they also have Sidebase, a non-profit "spin-off" responsible for open-source Nuxt modules like @sidebase/nuxt-auth which some of you might know already! Listen to the discussion around how doing Open Source benefits SIDESTREAM, how the Vue job market and hiring works, why Vue and Nuxt were chosen first of all and all around Nuxt Auth and further modules.',
+    links: [
+      {
+        label: 'Listen',
+        href: 'https://share.transistor.fm/s/e0cd5429',
+        iconName: 'mingcute:headphone-line',
+        solid: true
+      }
+    ]
   },
 ]
 </script>
@@ -72,29 +93,11 @@ const talks: Talk[] = [
               </p>
 
               <div class="flex items-center gap-2">
-                <NuxtLink v-if="talk.ticketLink && isAfter(talk.date, new Date())" :to="talk.ticketLink" :external="true" target="_blank">
-                  <AppButton type="primary" :solid="false">
+                <NuxtLink v-for="link in talk.links" :key="link.href" :href="link.href" :external="true" target="_blank">
+                  <AppButton type="primary" :solid="!!link.solid">
                     <div class="flex items-center gap-1">
-                      Tickets
-                      <Icon name="mingcute:external-link-line" size="18" class="mb-[3px]" />
-                    </div>
-                  </AppButton>
-                </NuxtLink>
-                <NuxtLink v-if="talk.link" :to="talk.link" :external="true" target="_blank">
-                  <AppButton type="primary">
-                    <div class="flex items-center gap-1">
-                      <template v-if="talk.linkLabel === 'details'">
-                        <Icon name="mingcute:information-line" size="18" class="mb-[3px]" />
-                        Details
-                      </template>
-                      <template v-if="talk.linkLabel === 'listen'">
-                        <Icon name="mingcute:headphone-line" size="18" class="mb-[3px]" />
-                        Listen
-                      </template>
-                      <template v-if="talk.linkLabel === 'watch'">
-                        <Icon name="mingcute:tv-2-line" size="18" class="mb-[3px]" />
-                        Watch
-                      </template>
+                      <Icon v-if="link.iconName" :name="link.iconName" size="18" class="mb-[2px]" />
+                      {{ link.label }}
                     </div>
                   </AppButton>
                 </NuxtLink>
