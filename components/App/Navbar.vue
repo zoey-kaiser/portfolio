@@ -34,6 +34,11 @@ const { social } = useAppConfig()
               <Icon name="mingcute:linkedin-line" size="26" />
             </AppButton>
           </NuxtLink>
+          <NuxtLink :to="social.bsky" :external="true" target="_blank">
+            <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
+              <Icon name="mingcute:bluesky-social-line" size="23" />
+            </AppButton>
+          </NuxtLink>
           <NuxtLink :to="social.twitter" :external="true" target="_blank">
             <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
               <Icon name="mingcute:social-x-line" size="23" />
