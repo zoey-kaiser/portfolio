@@ -32,7 +32,7 @@ const talks: Talk[] = [
       },
       {
         label: 'Watch',
-        href: 'https://www.youtube.com/watch?v=vu83i5XW5do&t=18180s',
+        href: 'https://www.youtube.com/watch?v=h3ro7zTFobg',
         iconName: 'mingcute:tv-2-line',
         solid: true
       }
