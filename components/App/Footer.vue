@@ -11,11 +11,6 @@ const { social } = useAppConfig()
             <Icon name="mingcute:linkedin-line" size="20" />
           </AppButton>
         </NuxtLink>
-        <NuxtLink :to="social.twitter" :external="true" target="_blank">
-          <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
-            <Icon name="mingcute:social-x-line" size="20" />
-          </AppButton>
-        </NuxtLink>
         <NuxtLink :to="social.github" :external="true" target="_blank">
           <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
             <Icon name="mingcute:github-line" size="20" />
