@@ -19,7 +19,7 @@ const { social } = useAppConfig()
       </div>
       <div class="mt-4 md:order-1 md:mt-0">
         <p class="text-center text-sm leading-5 text-gray-500">
-          Zoey Kaiser - 2024
+          Zoey Kaiser - {{ new Date().getFullYear() }}
         </p>
       </div>
     </div>
