@@ -40,7 +40,7 @@ const { social } = useAppConfig()
           <div class="absolute top-5 left-5 h-full w-full bg-pastel-lilac rounded-lg" />
           <div class="absolute top-3 left-3 h-full w-full bg-pastel-pink rounded-lg" />
           <img
-            src="/profile.png"
+            src="/profile.jpeg"
             alt="profile picture"
             class="relative h-80 w-80 object-cover rounded-lg border-2 border-black"
           >
