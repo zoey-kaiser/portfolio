@@ -15,11 +15,6 @@
               Home
             </AppButton>
           </NuxtLink>
-          <NuxtLink to="/projects">
-            <AppButton :solid="false">
-              Projects
-            </AppButton>
-          </NuxtLink>
         </div>
       </div>
     </div>

@@ -19,6 +19,42 @@ interface Talk {
 
 const talks: Talk[] = [
   {
+    title: 'Bau dein eigenes Weltraum-Idle-Spiel mit Vue.js',
+    location: 'JavaScript Days',
+    type: 'conference',
+    description: 'Nimm an unserem einsteiger freundlichen Vue.js-Workshop teil und baue deine erste praxisnahe App: ein Weltraum-Idle-Spiel, in dem du Flotten verwalten, Aufträge abschließen und Ressourcen handeln kannst. Du lernst, wie man ein Vue.js-Projekt aufsetzt, den Zustand der Anwendung mit Pinia verwaltet, das Routing mit Vue Router umsetzt und interaktive UI-Komponenten erstellt. Am Ende des Workshops wirst du eine voll funktionsfähige App mit nach Hause nehmen – und ein solides Verständnis der wichtigsten Vue.js-Konzepte haben!',
+    date: new Date('2025-10-21'),
+    links: [
+      {
+        label: 'Infos',
+        href: 'https://javascript-days.de/vue/bau-dein-eigenes-weltraum-idle-spiel-mit-vuejs-teil-1/',
+        iconName: 'mingcute:information-line',
+        solid: false
+      },
+      {
+        label: 'Teilnehmen',
+        href: 'https://javascript-days.de/berlin/tickets-berlin/',
+        iconName: 'mingcute:ticket-line',
+        solid: true
+      }
+    ]
+  },
+  {
+    title: 'Integrating AI into your Nuxt apps',
+    location: 'Vue.js Hamburg Meetup',
+    type: 'meeting',
+    date: new Date('2025-09-10'),
+    description: 'Welcome to the Vue.js meetup in Hamburg. This is all about the JavaScript framework Vue.js and is for everybody who wants to learn more about this fantastic frontend framework.',
+    links: [
+      {
+        label: 'Attend',
+        href: 'https://www.meetup.com/hamburg-vue-js-meetup/events/310352654',
+        iconName: 'mingcute:information-line',
+        solid: true
+      }
+    ]
+  },
+  {
     title: 'Code with Conscience',
     location: 'vuejs.de Conf',
     type: 'conference',
@@ -57,7 +93,7 @@ const talks: Talk[] = [
 </script>
 
 <template>
-  <div class="Page relative">
+  <div id="talks" class="Page relative">
     <div class="relative">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         My Talks
@@ -71,9 +107,9 @@ const talks: Talk[] = [
           <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div class="space-y-2">
               <div class="flex items-center gap-1">
-                <Icon v-if="talk.type === 'podcast'" name="mingcute:microphone-line" size="22" />
-                <Icon v-if="talk.type === 'conference'" name="mingcute:badge-line" size="22" />
-                <Icon v-if="talk.type === 'meeting'" name="mingcute:group-3-line" size="22" />
+                <Icon v-if="talk.type === 'podcast'" name="mingcute:microphone-line" size="22" class="hidden md:block" />
+                <Icon v-if="talk.type === 'conference'" name="mingcute:badge-line" size="22" class="hidden md:block" />
+                <Icon v-if="talk.type === 'meeting'" name="mingcute:group-3-line" size="22" class="hidden md:block" />
 
                 <h1 class="text-lg font-medium">
                   {{ talk.title }} @ {{ talk.location }}
