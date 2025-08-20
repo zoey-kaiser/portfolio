@@ -18,3 +18,9 @@ useHead({
     <LandingTalks class="pb-20" />
   </div>
 </template>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>

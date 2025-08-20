@@ -30,7 +30,7 @@ const projects: Project[] = [
 </script>
 
 <template>
-  <div class="Page relative overflow-hidden">
+  <div id="projects" class="Page relative overflow-hidden">
     <BackgroundBlobLilac class="hidden md:block absolute bottom-48 -right-5 h-96 w-96" />
     <BackgroundBlobGreen class="hidden md:block absolute top-2 left-96 h-96 w-96" />
     <BackgroundBlobPink class="hidden md:block absolute bottom-0 -left-14 h-96 w-96" />
