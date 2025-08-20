@@ -19,9 +19,6 @@ const { social } = useAppConfig()
             <NuxtLink to="/" class="text-lg hover:text-pastel-lilac-800">
               Home
             </NuxtLink>
-            <NuxtLink to="/projects" class="text-lg hover:text-pastel-lilac-800">
-              Projects
-            </NuxtLink>
             <NuxtLink to="/resume.pdf" target="_blank" class="text-lg hover:text-pastel-lilac-800">
               CV
             </NuxtLink>
