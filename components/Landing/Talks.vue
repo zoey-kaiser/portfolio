@@ -26,7 +26,7 @@ const talks: Talk[] = [
     date: new Date('2025-10-21'),
     links: [
       {
-        label: 'Informationen',
+        label: 'Infos',
         href: 'https://javascript-days.de/vue/bau-dein-eigenes-weltraum-idle-spiel-mit-vuejs-teil-1/',
         iconName: 'mingcute:information-line',
         solid: false
@@ -35,6 +35,21 @@ const talks: Talk[] = [
         label: 'Teilnehmen',
         href: 'https://javascript-days.de/berlin/tickets-berlin/',
         iconName: 'mingcute:ticket-line',
+        solid: true
+      }
+    ]
+  },
+  {
+    title: 'Integrating AI into your Nuxt apps',
+    location: 'Vue.js Hamburg Meetup',
+    type: 'meeting',
+    date: new Date('2025-09-10'),
+    description: 'Welcome to the Vue.js meetup in Hamburg. This is all about the JavaScript framework Vue.js and is for everybody who wants to learn more about this fantastic frontend framework.',
+    links: [
+      {
+        label: 'Attend',
+        href: 'https://www.meetup.com/hamburg-vue-js-meetup/events/310352654',
+        iconName: 'mingcute:information-line',
         solid: true
       }
     ]
