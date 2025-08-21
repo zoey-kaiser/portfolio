@@ -4,13 +4,6 @@
 
 My personal portfolio. You can visit the page at https://zoeykaiser.com.
 
-This is a [sidebase merino](https://sidebase.io/) app created by running `pnpm create sidebase@latest`. This project uses the following technologies for a great developer- and user-experience:
-- [TypeScript](https://www.typescriptlang.org/)
-- [Nuxt 3](https://nuxt.com)
-- Tailwind CSS
-- GitHub Actions based CI
-- Linting via ESLint and @antfu/eslint-config
-
 ### Setup
 
 Make sure to install the dependencies:
