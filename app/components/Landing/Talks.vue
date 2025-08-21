@@ -32,7 +32,7 @@ const talks: Talk[] = [
         solid: false
       },
       {
-        label: 'Teilnehmen',
+        label: 'Tickets',
         href: 'https://javascript-days.de/berlin/tickets-berlin/',
         iconName: 'mingcute:ticket-line',
         solid: true
@@ -40,16 +40,16 @@ const talks: Talk[] = [
     ]
   },
   {
-    title: 'Integrating AI into your Nuxt apps',
+    title: 'Nuxt + AI: Giving Your Nuxt App a Voice (and Superpowers)',
     location: 'Vue.js Hamburg Meetup',
     type: 'meeting',
     date: new Date('2025-09-10'),
-    description: 'Welcome to the Vue.js meetup in Hamburg. This is all about the JavaScript framework Vue.js and is for everybody who wants to learn more about this fantastic frontend framework.',
+    description: 'What if your Nuxt app could talk? Imagine an app that doesn’t just wait for clicks — it chats, understands your data, and even takes action. In this talk, we’ll explore why AI makes sense in your app, when it’s worth adding, and how to set it up without losing your mind. You’ll learn how to connect your app to its own data quickly and easily, turning a regular Nuxt app into one with a voice — and superpowers.',
     links: [
       {
-        label: 'Attend',
+        label: 'Join',
         href: 'https://www.meetup.com/hamburg-vue-js-meetup/events/310352654',
-        iconName: 'mingcute:information-line',
+        iconName: 'mingcute:user-add-2-line',
         solid: true
       }
     ]
