@@ -10,9 +10,6 @@ export default defineNuxtConfig({
   experimental: {
     viewTransition: true
   },
-  content: {
-    documentDriven: true
-  },
   typescript: {
     shim: false
   },
