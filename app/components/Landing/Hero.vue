@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { social } = useAppConfig()
+const { contact } = useAppConfig()
 </script>
 
 <template>
@@ -14,20 +14,14 @@ const { social } = useAppConfig()
           Hi, I am Zoey!
         </h1>
         <p class="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl">
-          I'm a developer who thrives on creating superb user interfaces and experiences,
-          ensuring my code reaches the highest standards while adeptly building and maintaining full-
-          stack applications.
+          I am a full stack developer based in Hamburg. I like turning ideas into intuitive user experiences and building apps that grow and scale together with you and your users. On the side, I speak at events and host the Hamburg Vue.js meetup.
         </p>
 
         <div class="flex items-center gap-2">
-          <AppButton
-            data-cal-link="zoeykaiser/sidebase"
-            data-cal-namespace="sidebase"
-            :data-cal-config="{ layout: 'month_view' }"
-          >
-            Schedule a meeting
+          <AppButton :data-cal-link="contact.calLink" :data-cal-config="{ layout: 'month_view' }">
+            Let's have a chat!
           </AppButton>
-          <NuxtLink :to="`mailto:${social.email}`">
+          <NuxtLink :to="`mailto:${contact.email}`">
             <AppButton :solid="false">
               Send me a mail
             </AppButton>
@@ -41,7 +35,7 @@ const { social } = useAppConfig()
           <div class="absolute top-3 left-3 h-full w-full bg-pastel-pink rounded-lg" />
           <img
             src="/profile.jpeg"
-            alt="profile picture"
+            alt="Picture of Zoey Kaiser"
             class="relative h-80 w-80 object-cover rounded-lg border-2 border-black"
           >
         </div>
