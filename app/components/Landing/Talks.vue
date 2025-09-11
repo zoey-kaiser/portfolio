@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { diffDays, isAfter } from '@formkit/tempo'
+import { isAfter } from '@formkit/tempo'
 
 interface Link {
   label: string
@@ -47,11 +47,16 @@ const talks: Talk[] = [
     description: 'What if your Nuxt app could talk? Imagine an app that doesn’t just wait for clicks — it chats, understands your data, and even takes action. In this talk, we’ll explore why AI makes sense in your app, when it’s worth adding, and how to set it up without losing your mind. You’ll learn how to connect your app to its own data quickly and easily, turning a regular Nuxt app into one with a voice — and superpowers.',
     links: [
       {
-        label: 'Join',
-        href: 'https://www.meetup.com/hamburg-vue-js-meetup/events/310352654',
-        iconName: 'mingcute:user-add-2-line',
+        label: 'Slides',
+        href: '/talks/nuxt-and-ai-slides-25.pdf',
+        iconName: 'mingcute:presentation-1-line',
+      },
+      {
+        label: 'Code',
+        href: 'https://github.com/zoey-kaiser/talk-nuxt-and-ai-25',
+        iconName: 'mingcute:code-line',
         solid: true
-      }
+      },
     ]
   },
   {
@@ -63,7 +68,7 @@ const talks: Talk[] = [
     links: [
       {
         label: 'Slides',
-        href: '/talks/VueJSDE - Code with Conscience.pdf',
+        href: '/talks/code-with-conscience-slides-24.pdf',
         iconName: 'mingcute:presentation-1-line'
       },
       {
@@ -122,14 +127,21 @@ const talks: Talk[] = [
 
             <div class="flex flex-col lg:items-end gap-4">
               <p class="text-lg font-medium grow">
-                {{ formatDate(talk.date) }}
+                <NuxtTime :datetime="talk.date" year="numeric" month="long" day="numeric" />
+
                 <span v-if="isAfter(talk.date, new Date())">
-                  (In {{ diffDays(talk.date, new Date()) }} days)
+                  (<NuxtTime :datetime="talk.date" relative />)
                 </span>
               </p>
 
               <div class="flex items-center gap-2">
-                <NuxtLink v-for="link in talk.links" :key="link.href" :href="link.href" :external="true" target="_blank">
+                <NuxtLink
+                  v-for="link in talk.links"
+                  :key="link.href"
+                  :href="link.href"
+                  :external="true"
+                  target="_blank"
+                >
                   <AppButton type="primary" :solid="!!link.solid">
                     <div class="flex items-center gap-1">
                       <Icon v-if="link.iconName" :name="link.iconName" size="18" class="mb-[2px]" />

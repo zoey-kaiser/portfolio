@@ -1,19 +1,24 @@
 <script lang="ts" setup>
-const { social } = useAppConfig()
+const { socials } = useAppConfig()
 </script>
 
 <template>
   <footer class="bg-white">
     <div class="mx-auto max-w-7xl px-6 py-4 md:flex md:items-center md:justify-between lg:px-8">
       <div class="flex justify-center space-x-4 md:order-2">
-        <NuxtLink :to="social.linkedIn" :external="true" target="_blank">
-          <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
-            <Icon name="mingcute:linkedin-line" size="20" />
-          </AppButton>
-        </NuxtLink>
-        <NuxtLink :to="social.github" :external="true" target="_blank">
-          <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
-            <Icon name="mingcute:github-line" size="20" />
+        <NuxtLink
+          v-for="social in socials"
+          :key="social.href"
+          :to="social.href"
+          :external="true"
+          target="_blank"
+        >
+          <AppButton
+            :title="social.name"
+            type="inverse"
+            class="h-9 w-9 grid place-content-center"
+          >
+            <Icon :name="social.icon" size="20" />
           </AppButton>
         </NuxtLink>
       </div>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { social } = useAppConfig()
+const { socials } = useAppConfig()
 </script>
 
 <template>
@@ -32,19 +32,19 @@ const { social } = useAppConfig()
         </div>
 
         <div class="hidden md:flex items-center gap-2">
-          <NuxtLink :to="social.linkedIn" :external="true" target="_blank">
-            <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
-              <Icon name="mingcute:linkedin-line" size="26" />
-            </AppButton>
-          </NuxtLink>
-          <NuxtLink :to="social.bsky" :external="true" target="_blank">
-            <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
-              <Icon name="mingcute:bluesky-social-line" size="23" />
-            </AppButton>
-          </NuxtLink>
-          <NuxtLink :to="social.github" :external="true" target="_blank">
-            <AppButton type="inverse" class="h-9 w-9 grid place-content-center">
-              <Icon name="mingcute:github-line" size="23" />
+          <NuxtLink
+            v-for="social in socials"
+            :key="social.href"
+            :to="social.href"
+            :external="true"
+            target="_blank"
+          >
+            <AppButton
+              :title="social.name"
+              type="inverse"
+              class="h-9 w-9 grid place-content-center"
+            >
+              <Icon :name="social.icon" size="24" />
             </AppButton>
           </NuxtLink>
         </div>
