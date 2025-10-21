@@ -52,9 +52,9 @@ const talks: Talk[] = [
         iconName: 'mingcute:presentation-1-line',
       },
       {
-        label: 'Code',
-        href: 'https://github.com/zoey-kaiser/talk-nuxt-and-ai-25',
-        iconName: 'mingcute:code-line',
+        label: 'Watch',
+        href: 'https://www.youtube.com/watch?v=1t_pnpdvPwY',
+        iconName: 'mingcute:tv-2-line',
         solid: true
       },
     ]
