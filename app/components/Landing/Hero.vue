@@ -14,7 +14,7 @@ const { contact } = useAppConfig()
           Hi, I am Zoey!
         </h1>
         <p class="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl">
-          I am a full stack developer based in Hamburg. I like turning ideas into intuitive user experiences and building apps that grow and scale together with you and your users. On the side, I speak at events and host the Hamburg Vue.js meetup.
+          I am a full stack developer based in Cologne. I like turning ideas into intuitive user experiences and building apps that grow and scale together with you and your users. On the side, I speak at events and support the Hamburg Vue.js meetup.
         </p>
 
         <div class="flex items-center gap-2">
